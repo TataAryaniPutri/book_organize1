@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Library Management System</h1>
+        <nav>
+            <a href="#" id="loginLink">Login</a>
+            <a href="#" id="logoutLink" style="display:none;">Logout</a>
+        </nav>
+    </header>
+
+    <section id="loginSection">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Login</button>
+        </form>
+    </section>
+
+    <section id="bookManagementSection" style="display:none;">
+        <h2>Book Management</h2>
+        <form id="bookForm">
+            <label for="bookTitle">Title:</label>
+            <input type="text" id="bookTitle" name="bookTitle" required>
+            <label for="bookAuthor">Author:</label>
+            <input type="text" id="bookAuthor" name="bookAuthor" required>
+            <button type="button" onclick="addBook()">Add Book</button>
+        </form>
+
+        <h3>Book List</h3>
+        <table id="bookTable">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Book rows will be added here -->
+            </tbody>
+        </table>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
